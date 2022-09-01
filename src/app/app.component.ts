@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {MenuItem, PrimeIcons} from 'primeng/api';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
  items: MenuItem[]=[
   {
     label: "Biblioteca",
@@ -13,11 +15,13 @@ export class AppComponent {
     items: [
       { 
         label: "Libros",
-        icon: PrimeIcons.BOOKMARK
+        icon: PrimeIcons.BOOKMARK,
+        routerLink:['/libros']
       },
       {
          label: "Autores",
-         icon: PrimeIcons.USERS
+         icon: PrimeIcons.USERS,
+         routerLink:['/autores']
         }
     ]
   }
